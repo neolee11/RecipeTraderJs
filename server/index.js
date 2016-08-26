@@ -1,15 +1,17 @@
+//use async library
+
 var util = require('./myUtil');
 
 
-console.log(util.add());
+console.log(util.add(3, 4));
 
-console.log('hello');
+console.log('hello1');
 
 
 
 var a = bar();
 
-console.log(a);
+
 
 var fun = function () {
     console.log('fun');
@@ -21,7 +23,7 @@ function bar() {
 
 function add(input){
     return function (intpu2) {
-        return input + intpu2;
+        return input + intpu2 + 100;
     }
 }
 
@@ -42,7 +44,6 @@ var addClosure = (function () {
     return function () {return counter += 1;}
 })();
 
-var addClosure = function () {return counter += 1;};
 
 console.log(addClosure());
 console.log(addClosure());

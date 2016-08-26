@@ -4,10 +4,12 @@
 
 (function (util) {
 
+    'use strict';
+
     util.add = function (a, b) {
         return a + b;
     };
 
-    
+
 })(exports);
 
