@@ -1,4 +1,11 @@
+var util = require('./myUtil');
+
+
+console.log(util.add());
+
 console.log('hello');
+
+
 
 var a = bar();
 
