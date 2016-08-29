@@ -1,8 +1,9 @@
 //use async library
 
 var util = require('./myUtil');
+var market = require('./core/domain/market/market');
 
-
+console.log(market.minus(4, 1));
 console.log(util.add(3, 4));
 
 console.log('hello1');
