@@ -10,7 +10,6 @@ console.log('start of add node test');
 console.log("20 + 12 = " + addNode.curryAdd(20)(12));
 console.log('end of add node test');
 
-
 var getResource = function () {
     var e = new EventEmitter();
     process.nextTick(function () {
