@@ -1,0 +1,22 @@
+{
+  "name": "recipe-trader-js",
+  "version": "1.0.0",
+  "description": "trade recipe",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "node install-packages.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neolee11/RecipeTraderJs.git"
+  },
+  "author": "“Daniel <neolee11@yahoo.com> (http://koajs.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/neolee11/RecipeTraderJs/issues"
+  },
+  "homepage": "https://github.com/neolee11/RecipeTraderJs#readme"
+}
