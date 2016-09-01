@@ -1,0 +1,14 @@
+{
+  "name": "console_app",
+  "version": "1.0.0",
+  "description": "console application",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "keywords": [
+    "console"
+  ],
+  "author": "Daniel Li <neolee11@yahoo.com> (http://koajs.com/)",
+  "license": "MIT"
+}

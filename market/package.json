@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --reporter spec"
   },
   "author": "Daniel Li <neolee11@yahoo.com> (http://koajs.com/)",
   "license": "ISC",
@@ -17,5 +17,9 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/neolee11/RecipeTraderJs.git"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2"
   }
 }
