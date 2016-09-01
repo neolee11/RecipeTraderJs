@@ -9,7 +9,7 @@
 
 
     market.getMoney = function (name) {
-        return name + " has $100";
+        return name + " has $200";
     };
 
     return market;
