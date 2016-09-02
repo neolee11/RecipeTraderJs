@@ -8,6 +8,7 @@
     var _ = require('lodash');
 
 
+
     market.getMoney = function (name) {
         return name + " has $400";
     };

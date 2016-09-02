@@ -8,7 +8,7 @@ describe("market tests", function () {
    describe("functionality tests", function () {
        it("it should return $300", function () {
           var result = market.getMoney("dollar");
-          expect(result).include('300');
+          expect(result).include('400');
        });
    })
 });

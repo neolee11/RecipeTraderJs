@@ -2,18 +2,24 @@
   "name": "server",
   "version": "1.0.0",
   "description": "web server",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
   },
   "author": "Daniel Li <neolee11@yahoo.com> (http://koajs.com/)",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
     "ff-add-node-module": "^1.0.0",
     "market": "file:../market"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/neolee11/RecipeTraderJs.git"
+  },
+  "devDependencies": {
+    "nodemon": "^1.10.2"
   }
 }
