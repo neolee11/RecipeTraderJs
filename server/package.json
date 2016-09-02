@@ -9,6 +9,7 @@
   "author": "Daniel Li <neolee11@yahoo.com> (http://koajs.com/)",
   "license": "ISC",
   "dependencies": {
+    "ff-add-node-module": "^1.0.0",
     "market": "file:../market"
   },
   "repository": {

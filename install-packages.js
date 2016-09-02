@@ -21,23 +21,32 @@ function npm_install_recursive(folder)
         if (folder === root)
         {
             console.log('===================================================================');
-            console.log(`Skipping "npm install" inside root folder - ` + folder);
+            console.log('Skipping "npm install" inside root folder - ' + folder);
             console.log('===================================================================');
         }
         else
         {
+            var relPath = folder === root ? 'root folder' : './' + path.relative(root, folder);
             console.log('===================================================================');
-            console.log(`Performing "npm install" inside ${folder === root ? 'root folder' : './' + path.relative(root, folder)}`);
+            console.log('Performing "npm install" inside ' + relPath);
             console.log('===================================================================');
             npm_install(folder);
         }
         
     }
 
-    for (let subfolder of subfolders(folder))
-    {
+    var subfolder;
+    var currSubFolders = subfolders(folder);
+    var i;
+    for(i = 0; i < currSubFolders.length; i++){
+        subfolder = currSubFolders[i];
         npm_install_recursive(subfolder)
     }
+
+    // for (subfolder of subfolders(folder))
+    // {
+    //     npm_install_recursive(subfolder)
+    // }
 }
 
 function npm_install(where)
@@ -47,8 +56,16 @@ function npm_install(where)
 
 function subfolders(folder)
 {
-    return fs.readdirSync(folder)
-        .filter(subfolder => fs.statSync(path.join(folder, subfolder)).isDirectory())
-        .filter(subfolder => subfolder !== 'node_modules' && subfolder[0] !== '.')
-        .map(subfolder => path.join(folder, subfolder))
+    // return fs.readdirSync(folder)
+    //     .filter(subfolder => fs.statSync(path.join(folder, subfolder)).isDirectory())
+    //     .filter(subfolder => subfolder !== 'node_modules' && subfolder[0] !== '.')
+    //     .map(subfolder => path.join(folder, subfolder));
+
+    return fs.readdirSync(folder).filter(function (subfolder) {
+            return fs.statSync(path.join(folder, subfolder)).isDirectory();
+        }).filter(function (subfolder) {
+            return subfolder !== 'node_modules' && subfolder[0] !== '.';
+        }).map(function (subfolder) {
+            return path.join(folder, subfolder);
+        });
 }

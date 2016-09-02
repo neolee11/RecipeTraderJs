@@ -9,10 +9,8 @@
 
 
     market.getMoney = function (name) {
-        return name + " has $300";
+        return name + " has $400";
     };
-
-    return market;
 
 })(module.exports);
 
